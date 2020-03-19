@@ -4,25 +4,11 @@
   "author": "odmishien",
   "version": "0.0.1",
   "description": "攻殻機動隊の世界で文字列がバーコードになっているという設定がカッコよすぎるのでTwitterで再現しました",
-  "icons": {
-    "32": "icons/icon_32.png",
-    "48": "icons/icon_48.png",
-    "128": "icons/icon_128.png"
-  },
-  "browser_action": {
-    "default_icon": {
-      "32": "icons/icon_32.png",
-      "48": "icons/icon_48.png",
-      "128": "icons/icon_128.png"
-    },
-    "default_title": "??",
-    "default_popup": "src/html/popup.html"
-  },
   "permissions": ["tabs"],
   "content_scripts": [
     {
-      "matches": ["http://twitter.com/*"],
-      "js": ["src/js/app.js", "src/js/JsBarcode.code128.min.js"]
+      "matches": ["https://twitter.com/*"],
+      "js": ["src/js/qrcode.min.js", "src/js/app.js"]
     }
   ]
 }
